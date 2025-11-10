@@ -30,8 +30,10 @@ fi
 
 # Install python packages (additionally install timm and python3.10-venv packages)
 echo "Installing python packages"
+add-apt-repository -y ppa:deadsnakes/ppa
+apt install -y python3.10-venv 
 python -m pip install --upgrade pip wheel timm python3.10-venv
 
 # Run the webui
 echo "Running the webui"
-bash ./webui.sh --precision full --no-half
+bash ./webui.sh --upcast-sampling

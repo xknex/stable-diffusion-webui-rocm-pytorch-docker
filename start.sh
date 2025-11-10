@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+useradd -u 1001 -g 1001 dockerx
+
 sudo mkdir -p ./data
 sudo chown -R 1001:1001 ./data
 sudo chmod -R a+rwx ./data
